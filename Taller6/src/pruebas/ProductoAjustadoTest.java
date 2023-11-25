@@ -52,7 +52,6 @@ class ProductoAjustadoTest {
 
     @Test
     public void testGenerarTextoFactura_SinAgregadosYEliminados() {
-        // Crear un nuevo producto ajustado sin ingredientes agregados ni eliminados
         ProductoAjustado paVacio = new ProductoAjustado(pm, new ArrayList<>(), new ArrayList<>());
         String expectedText = "\n- Hamburguesa"; // Se espera solo el nombre del producto
         assertEquals(expectedText, paVacio.generarTextoFactura());
