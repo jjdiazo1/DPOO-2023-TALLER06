@@ -22,8 +22,8 @@ class ProductoAjustadoTest {
     @BeforeEach
     public void setUp() {
     	
-    	this.lista1 = new ArrayList<>(); // Inicializar la lista de ingredientes agregados
-        this.lista2 = new ArrayList<>(); // Inicializar la lista de ingredientes eliminados
+    	this.lista1 = new ArrayList<>(); 
+        this.lista2 = new ArrayList<>(); 
 
     	this.lista1.add(new Ingrediente("Pollo", 2500));
     	this.lista2.add(new Ingrediente("Carne", 5000));
@@ -41,7 +41,7 @@ class ProductoAjustadoTest {
 
     @Test
     public void testGetPrecioNuevo() {
-        assertEquals(20000, pa.getPrecio()); //A ver,....
+        assertEquals(20000, pa.getPrecio()); 
     }
     
     @Test
