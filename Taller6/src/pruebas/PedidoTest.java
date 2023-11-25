@@ -35,10 +35,6 @@ class PedidoTest {
         ProductoMenu producto2 = new ProductoMenu("Refresco", 5000);
         
 		p.agregarProducto(producto1);
-		
-			//Lo manda a la funcion de abajo para saber si si se cumplio la excepcion.
-		
-      
 		p.agregarProducto(producto2);
 		
 
@@ -58,14 +54,9 @@ class PedidoTest {
             ProductoMenu producto2 = new ProductoMenu("Producto 2", 60000);
             p.agregarProducto(producto1);
             p.agregarProducto(producto2);
-
-            // Si llegamos a este punto y no se lanzó ninguna excepción,
-            // entonces la prueba debería fallar porque se esperaba la excepción.
             fail("Se esperaba ValorTotalPedidoExcedidoException");
         } catch (ValorTotalPedidoExcedidoException e) {
-            // Verifica si la excepción capturada es del tipo ValorTotalPedidoExcedidoException
             assertNotNull(e);
-            // También se podria haber hecho con AssertThrows pero decidi que no era necesario.
         }
     }
     
